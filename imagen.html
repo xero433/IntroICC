@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="contendor-titulo">
+    <img src="logo.png" class="imagen">
+    <h1>Introduccion a la Ingenieria Civil en Computacion</h1>
+  </div>
+  <div class="contenedor-botones">
+    <a href="index.html" class="boton">Inicio</a>
+    <a href="sistema-numerico.html" class="boton">Sistema Numérico</a>
+    <a href="numero-negativo.html" class="boton">Números Negativos</a>
+    <a href="cifrado.html" class="boton">Cifrado</a>
+    <a href="datos.html" class="boton">Datos</a>
+    <a href="imagen.html" class="boton">Imágenes</a>
+    <a href="memoria.html" class="boton">Memorias</a>
+    <a href="caracteres.html" class="boton">Carácteres</a>
+  </div>
+  <div>
+    <ol>
+      <li style="font-size: 24px;">Imagenes</li>
+      <p style="font-size: 12px;">Partamos con las imagenes.<br>En general, trabajamos en los computadores con
+        interfaces visuales:</p>
+      <ul>
+        <li style="font-size: 12px;">Necesitamos "ver" cosas en pantalla</li>
+        <li style="font-size: 12px;">Eso sin contar las fotos</li>
+        <li style="font-size: 12px;">Ni los videos</li>
+      </ul>
+      <p style="font-size: 12px;">Y obviamente, toda esa información visual, debemos ser capaces de representarla
+        mediante bits!</p>
+      <li style="font-size: 24px;">Mapas de bits</li>
+      <p style="font-size: 12px;">Consideremos el siguiente ejemplo, de una imagen con solo doscolores (blanco y negro).
+        Podemos utilizar 1 para negro y 0 para blanco:</p>
+      <img src="imagen.png" style="display: flex; justify-content: center; margin: auto;">
+      <li style="font-size: 24px;">¿Cómo ver más?</li>
+      <p style="font-size: 12px;">Naturalmente queremos ocupar más colores que solo blanco y negro. <span
+          style="color: orange">¿Cómo lo hacemos?</span></p>
+      <ul>
+        <li style="font-size: 12px;">Si utilizamos un bit para representar blanco y negro...</li>
+        <li style="font-size: 12px;">Más bits == más información</li>
+      </ul>
+      <li style="font-size: 24px;">Escala de grises</li>
+      <p style="font-size: 12px;">Por ej. ¿Cuántos numero podemos representar con 8 bits? <span
+          style="color: orange">256</span></p>
+      <img src="grises.png" style="display: flex; justify-content: center; margin: auto">
+      <li style="font-size: 24px;">¿Y la matriz?</li>
+      <p style="font-size: 12px;">La matriz sigue siendo la misma, pero ahora, en cada posición se almacena un número en
+        el rango (0-255).</p>
+      <img src="escaña.png" style="display: flex; justify-content: center; margin: auto">
+      <p style="font-size: 12px;">¿Qué representa esto?</p>
+      <li style="font-size: 24px;">Formato PGM</li>
+      <p style="font-size: 12px;">Formato de imagen en ASCII plano, que nos permite ver los valores de una imagen. Por
+        ejemplo:</p>
+      <img src="imagen-gris.png" style="display: flex; justify-content: center; margin: auto;">
+      <p style="font-size: 12px;">En linux, pueden jugar con la aplicacion Gimp para convertir entre formatos de imagen,
+        incluido PGM.</p>
+      <li style="font-size: 24px;">Modelo RGB</li>
+      <p style="font-size: 12px;">¿Y el color? - Debemos definir modelos que nos permitan trabajar con color (más bits).
+      </p>
+      <ul>
+        <li style="font-size: 12px;">Modelo de color aditivo (¿el que más conocen?)</li>
+        <li style="font-size: 12px;">Colores primarios de la luz</li>
+        <li style="font-size: 12px;">Utilizado en dispositivos de despliegue</li>
+        <img src="RGB.png" style="display: flex; justify-content: center; margin: auto">
+      </ul>
+      <li style="font-size: 24px;">Compresión</li>
+      <p style="font-size: 12px;">El principal problema de los mapas de bits es el espacio que ocupan (Leon es 640x480 y
+        necesita 1Mb de espacio) <span style="color:orange">Solución</span>: “Comprimir” la imagen
+      </p>
+      <img src="compresion.png" style="display: flex; justify-content: center; margin: auto">
+      <li style="font-size: 24px;">Compresion sin pérdida (lossless)</li>
+      <img src="lossless.png"
+        style="display: flex; justify-content: center; margin: auto; margin-top: 10px; margin-bottom: 10px;">
+      <ol>
+        <li style="font-size: 12px;">Primera opción: <span style="color: orange;">Es ambiguo</span><br><span
+            style="color: red; margin-left: 100px;">1</span><span style="color: green">10000</span> <span
+            style="color:red">0</span><span style="color: green">10000</span> <span style="color: red">1</span><span
+            style="color: red">1</span><span style="color: green">11100</span> <span style="color: red;">0</span><span
+            style="color: green">100</span></li>
+        <li style="font-size: 12px;">Segunda opción: Usar largo fijo para la cantidad: <span style="color:orange">Run
+            Length Encoding</span><br><span style="color:red; margin-left: 70px;">1</span><span
+            style="color:green">0010000</span> <span style="color: red">0</span><span style="color:green">0010000</span>
+          <span style="color:red">1</span><span style="color:green">0011100</span> <span style="color:red">0</span><span
+            style="color: green"></span>0000100
+        </li>
+      </ol>
+      <li style="font-size: 24px;">Compresión con pérdida (lossy)</li>
+      <p style="font-size: 12px;">Como su nombre lo dice, son métodos en los que se pierde información</p>
+      <ul>
+        <li style="font-size: 12px;">Estandar JPEG</li>
+        <li style="font-size: 12px">Muy utilizado en fotografía digital</li>
+        <li style="font-size: 12px;">Grado de compresión ajustable</li>
+        <img src="lossy.png" style="display: flex; justify-content: center; margin: auto">
+      </ul>
+      <li style="font-size: 24px;">Sonido</li>
+      <p style="font-size: 18px;">Funciona igual que las imágenes:</p>
+      <ol>
+        <li style="font-size: 12px;">Convierte la información de análoga a digital</li>
+        <li style="font-size: 12px;">Comprimo los datos</li>
+      </ol>
+      <p style="font-size: 18px;"> Para la conversion tomo muestras</p>
+      <ol>
+        <li style="font-size: 12px;">Mientras más, mejor.</li>
+        <li style="font-size: 12px;">CD = 44.100 muestras/seg</li>
+        <li style="font-size: 12px;">Cada muestra CD = 16 bits</li>
+      </ol>
+    </ol>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="contendor-titulo">
+    <img src="logo.png" class="imagen">
+    <h1>Introduccion a la Ingenieria Civil en Computacion</h1>
+  </div>
+  <div class="contenedor-botones">
+    <a href="index.html" class="boton">Inicio</a>
+    <a href="sistema-numerico.html" class="boton">Sistema Numérico</a>
+    <a href="numero-negativo.html" class="boton">Números Negativos</a>
+    <a href="cifrado.html" class="boton">Cifrado</a>
+    <a href="datos.html" class="boton">Datos</a>
+    <a href="imagen.html" class="boton">Imágenes</a>
+    <a href="memoria.html" class="boton">Memorias</a>
+    <a href="caracteres.html" class="boton">Carácteres</a>
+  </div>
+  <div>
+    <ol>
+      <li style="font-size: 24px; background-color: yellow;"><b>Caracteres</b></li>
+      <p style="font-size: 12px;">Simplemente hacemos un mapeo entre los caracteres que queremos representar y un valor
+        numérico (entero)</p>
+      <p style="font-size: 12px;">Son dos los principales conjuntos de caracteres utilizados:</p>
+      <ul>
+        <li style="font-size: 12px;">ASCII</li>
+        <li style="font-size: 12px;">Unicode</li>
+      </ul>
+      <p style="font-size: 12px;">Una vez que tenemos el entero, a binario es trivial</p>
+      <li style="font-size: 24px; background-color: yellow;"><b>Ascii</b></li>
+      <p style="font-size: 12px;">Acrónimo para American Standard Code for Information Interchange</p>
+      <ul>
+        <li style="font-size: 10px;">8 bits para representar cada caracter (solo 7 se usan)</li>
+        <li style="font-size: 10px;">Funciona con la mayoria de los idiomas tradicionales (no hay ñ)</li>
+        <li style="font-size: 10px;">Caracteres del 0-32 no se imprimen (de control)</li>
+        <li style="font-size: 10px;">Diferente código para mayúsculas y minúsculas</li>
+        <li style="font-size: 10px;">Números y letras en orden</li>
+      </ul>
+      <li style="font-size: 24px; background-color: yellow;"><b>Ascii extendida</b></li>
+      <img src="ascii.png" style="display: flex; justify-content: center; margin: auto;">
+      <li style="font-size: 24px; background-color: yellow;"><b>ASCII</b></li>
+      <p style="font-size: 12px;">Ejemplo:</p>
+      <p style="font-size: 12px; margin-left: 30px;">Este curso es fácil, solo hay que estudiar...</p>
+      <img src="ascii2.png" style="display: flex; justify-content: center; margin: auto;">
+      <li style="font-size: 24px; background-color: yellow;"><b>Unicode</b></li>
+      <p style="font-size: 12px;">Claramente ASCII nos queda corto, a pesar de sus extensiones...</p>
+      <p style="font-size: 12px;"><b>Unicode</b></p>
+      <ul>
+        <li style="font-size: 10px;">Representa un mayor número de idiomas (incluso lenguas muertas)</li>
+        <li style="font-size: 10px;">Utiliza 16 bits para representar cada carácter...</li>
+        <li style="font-size: 10px;">Un total de 65535 caracteres posibles</li>
+        <li style="font-size: 10px;">Los primeros caracteres corresponden a los caracteres ASCII</li>
+        <li style="font-size: 10px;">Utilizando ampliamente, por ejemplo Java, XML o el archivo fuente de esta
+          presentacion</li>
+        <li style="font-size: 10px;">3 fornas de codificación dependiendo del procesador:</li>
+        <ul>
+          <li style="font-size: 10px;">UTF-8, UTF-16, UTF-32</li>
+        </ul>
+      </ul>
+      <img src="unicode.png" style="display: flex; justify-content: center; margin: auto;">
+    </ol>
+  </div>
+</body>
+
+</html>

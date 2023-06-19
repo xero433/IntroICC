@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="contendor-titulo">
+    <img src="logo.png" class="imagen">
+    <h1>Introduccion a la Ingenieria Civil en Computacion</h1>
+  </div>
+  <div class="contenedor-botones">
+    <a href="index.html" class="boton">Inicio</a>
+    <a href="sistema-numerico.html" class="boton">Sistema Numérico</a>
+    <a href="numero-negativo.html" class="boton">Números Negativos</a>
+    <a href="cifrado.html" class="boton">Cifrado</a>
+    <a href="datos.html" class="boton">Datos</a>
+    <a href="imagen.html" class="boton">Imágenes</a>
+    <a href="memoria.html" class="boton">Memorias</a>
+    <a href="caracteres.html" class="boton">Carácteres</a>
+  </div>
+  <div style="text-align: justify;">
+    <ol>
+      <li style="font-size: 24px;">Extendiendo el Sistema Binario</li>
+      <p style="font-size: 12px;">No solo de numeros naturales vive el hombre... los enteros hecho incluyen los <span
+          style="color:orange">negativos.</span><br>Existen varias formas en que podemos representar los números
+        negativos en el sistema binario: </p>
+      <ul style="font-size: 12px;">
+        <li>Signo y magnitud</li>
+        <li>Complemento a 1</li>
+        <li>Complemento a 2</li>
+      </ul>
+      <p style="font-size: 12px;">Veamos cada una de ellas en detalle.</p>
+      <li style="font-size: 24px;">Signo y Magnitud</li>
+      <p style="font-size: 12px;">Lo más simple, se utiliza el bit <span style="color:orange">más significativo</span>
+        para codificar el signo del número representado:</p>
+      <ul>
+        <li style="font-size: 12px;">0: positivo</li>
+        <li style="font-size: 12px;">1: negativo</li>
+      </ul>
+      <ul>
+        <li style="font-size: 18px;">Caracteristicas:</li>
+        <ol>
+          <li style="font-size: 12px;">Utilizando <span style="color: orange;">1 byte</span> (8 bits) podemos
+            representar <span style="color:orange">256 números</span> - 128 positivos y 128 negativos.</li>
+          <li style="font-size: 12px;">El cero está <span style="color:orange">dos veces</span>: +0 y -0</li>
+          <li style="font-size: 12px;">¿Cómo sumar dos números?</li>
+        </ol>
+      </ul>
+      <li style="font-size: 18px;">Complemento a 1</li>
+      <p style="font-size: 12px;">Funciona de forma similar al método de <i>signo y magnitud:</i></p>
+      <ol>
+        <li style="font-size: 12px;">El bit <span style="color: orange">más significativo</span> se utiliza para el
+          signo.</li>
+        <li style="font-size: 12px;">Números <span style="color:orange">positivos</span> se representan igual que
+          siempre.</li>
+        <li style="font-size: 12px;">Números negativos se representan como el <span style="color: orange">opuesto</span>
+          al positivo. Es decir se <span style="orange">invierten</span> los digitos del número (se intercambian 0's y
+          1's).</li>
+      </ol>
+      <ul>
+        <li style="font-size: 18px;">Características:</li>
+        <ol>
+          <li style="font-size: 12px;">En <span style="color:orange">1 byte</span> (8 bits) se puede codificar en <span
+              style="color: orange">256 números</span> - Simétrico del -127 al 127</li>
+          <li style="font-size: 12px;">Nuevamente, el cero está <span style="color:orange">dos veces</span>: +0 (0000
+            0000<sub>2</sub>) y -0 (1111 1111<sub>2</sub>).</li>
+          <li style="font-size: 12px;">En complemento a 1, la resta se convierte en suma:</li>
+          <ul>
+            <li style="font-size: 12px;">Si NO hay acarreo, el resultado es <span style="color: orange">negativo</span>.
+            </li>
+            <li style="font-size: 12px;">Si HAY acarreo, el resultado es <span style="color: orange">positivo</span> y
+              se debe sumar 1 al
+              resultado.<br>Ej: 2<sub>10</sub> - 1<sub>10</sub> (0000 0010<sub>2</sub> + 1111 1110<sub>2</sub>)</li>
+          </ul>
+        </ol>
+      </ul>
+      <li style="font-size: 24px;">Complemento a 2</li>
+      <p style="font-size: 12px;">Muy similar al complemento a 1, con una única diferencia:</p>
+      <ul>
+        <li style="font-size: 12px;">El bit <span style="color:orange">más significativo</span> para la codificacion del
+          signo.</li>
+        <li style="font-size: 12px;">Si el número es positivo, se mantiene inalterado (bit más significativo es 0).</li>
+        <li style="font-size: 12px;">Si el número es negativo, calculamos el complemento a 1, <span
+            style="color:orange">y sumamos 1</span>.</li>
+        <li style="font-size: 18px;">Características:</li>
+        <ol>
+          <li style="font-size: 12px;">¿Qué sucedió con el rango de números posibles de representar?</li>
+          <li style="font-size: 12px;">Solo un valor para representar el 0<sub>10</sub>!!</li>
+          <li style="font-size: 12px;">La resta se vuelve una suma... no son necesarios los acarreos (aunque el
+            resultado debe estar entre -2<sup>n-1</sup> y 2<sup>n-1</sup> - 1)</li>
+        </ol>
+        <p style="font-size: 12px;">El procesador ARM usa notación de complemento a 2 para la representación de números
+          negativos.</p>
+      </ul>
+    </ol>
+
+  </div>
+
+</body>
+
+</html>

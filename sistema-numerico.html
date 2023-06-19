@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="contendor-titulo">
+    <img src="logo.png" class="imagen">
+    <h1>Introduccion a la Ingenieria Civil en Computacion</h1>
+  </div>
+  <div class="contenedor-botones">
+    <a href="index.html" class="boton">Inicio</a>
+    <a href="sistema-numerico.html" class="boton">Sistema Numérico</a>
+    <a href="numero-negativo.html" class="boton">Números Negativos</a>
+    <a href="cifrado.html" class="boton">Cifrado</a>
+    <a href="datos.html" class="boton">Datos</a>
+    <a href="imagen.html" class="boton">Imágenes</a>
+    <a href="memoria.html" class="boton">Memorias</a>
+    <a href="caracteres.html" class="boton">Carácteres</a>
+  </div>
+  <div style="text-align: justify;">
+    <ol>
+      <li style="font-size: 24px;">Introducción</li>
+      <ul style="font-size: 18px;">
+        <li>¿Qué es un computador?</li>
+        <ul style="font-size: 12px">
+          <li>Máquina de <span style="color: orange">proceso universal</span></li>
+          <li>Nos permite resolver problemas distintos...</li>
+          <li>Simplemente mediante la modificación del set de intrucciones utilizados</li>
+        </ul>
+        <li> El computador como máquina universal</li>
+        <p style="font-size: 12px;">Como máquina universal, la descripción clásica de un computador sigue el modelo
+          propuesto por Von Neumann en 1940:</p>
+        <img src="computador.png" style="display: flex; justify-content: center; align-items: center;">
+        <li>Arquitectura de von Neumann</li>
+        <p style="font-size: 12px;">Almacenar en memoria<span style="color: orange"> datos e intrucciones</span> o
+          sea,<span style="color: orange"> los programas.</span></p>
+        <li class="contenedor-memoria">Subsistema de Memoria</li>
+        <ul style="font-size: 12px;">
+          <li>Almacenamiento temporal para <span style="color: orange">datos y programas</span> durante la ejecución.
+          </li>
+          <li>Compuesta por <span style="color:orange">celdas</span> (8 bits), identificadas por una <span
+              style="color: orange">dirección</span> única.</li>
+          <li>Las celdas se agrupan en <span style="color:orange">palabras</span>, que pueden ser de 8, 16, 32 ó 64
+            bits.</li>
+          <li>Dos operaciones básicas: <span style="color:orange">guardar</span> y <span
+              style="color:orange">recuperar</span>, ejecutadas en forma directa (memoria de acceso aleatorio)</li>
+          <li>Solo almacena <span style="color:orange">números</span> (representados en binario); informacion e
+            intrucciones deben codificarse en binario.</li>
+          <img src="memoria.png" class="memoria">
+        </ul>
+      </ul>
+      <li style="font-size: 24px;">Sistemas de Numeración</li>
+      <p style="font-size: 12px;">Un sistema de numeración es simplemente el conjunto que nos permite construir números
+        en base a:</p>
+      <ul style="font-size: 12px;">
+        <li>Un conjunto de <span style="color:orange">símbolos.</span></li>
+        <li>Un conjunto de <span style="color: orange">reglas.</span></li>
+      </ul>
+      <p style="font-size: 12px;">En particular, nos interesan los sistemas <i>Posicionales</i>, aquellos en que el
+        valor de un numero depende del <span style="color: orange">dígito</span> ocupado y su <span
+          style="color: orange">posición.</span></p>
+      <ul>
+        <li style="font-size: 18px;">Decimal</li>
+        <p style="font-size: 12px;">El sistema decimal es el mas conocido:</p>
+        <ul style="font-size: 12px;">
+          <li>Dígitos: {0,1,2,3,4,5,6,7,8,9}</li>
+          <li>Si se acaban, se agrega una columna a la izquierda</li>
+        </ul>
+        <p style="font-size: 14px;">Ejemplos:</p>
+        <p style="font-size: 12px;">1. 21, 12.230.836.253</p>
+        <li style="font-size: 18px;">Romano</li>
+        <p style="font-size: 12px" ;>Bien conocido, pero con reglas mas complejas:</p>
+        <ul>
+          <li>Dígitos: I, V, X, L, C, M.</li>
+          <li>Regla: Después de tres iguales, se resta.</li>
+          <p style="font-size: 14px;">Ejemplos</p>
+          <p style="font-size: 12px;">I, II, III, IV, XL, CM</p>
+        </ul>
+      </ul>
+      <li style="font-size: 24px;">Sistema de Numeración en computación</li>
+      <ul>
+        <li style="font-size: 18px;">Binario</li>
+        <p style="font-size: 12px;">La electrónica de un computador se hace simple si debemos distinguir entre dos
+          estados:</p>
+        <ul>
+          <li>Encendido / Apagado</li>
+          <li>+5V / -5V</li>
+          <li>1 / 0</li>
+        </ul>
+        <li style="font-size: 18px;">Conversión Binario - Decimal</li>
+        <p style="font-size: 12px;">Naturalmente, es posible representar números binarios por su equivalente decimal,
+          por ejemplo:</p>
+        <ul>
+          <li style="font-size: 12px;"> Potencias de dos (Ej: 101)</li>
+        </ul>
+        <li style="font-size: 18px;">Conversión Decimal - Binario</li>
+        <p style="font-size: 12px;">Naturalmente, también es posible realizar el proceso inverso (de decimal a binario),
+          por ejemplo el numero 81:<br>81/2 = 40 resto 1<br>40/2 = 20 resto 0<br>20/2 = 10 resto 0<br>10/2 = 5 resto
+          0<br>5/2 = 2 resto 1<br>2/2 = 1 resto 0<br>1/2 = 0 resto 1 - Fin<br>81 equivale al número <span
+            style="color:orange">1010001</span> en binario.</p>
+      </ul>
+    </ol>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="contendor-titulo">
+    <img src="logo.png" class="imagen">
+    <h1>Introduccion a la Ingenieria Civil en Computacion</h1>
+  </div>
+  <div class="contenedor-botones">
+    <a href="index.html" class="boton">Inicio</a>
+    <a href="sistema-numerico.html" class="boton">Sistema Numérico</a>
+    <a href="numero-negativo.html" class="boton">Números Negativos</a>
+    <a href="cifrado.html" class="boton">Cifrado</a>
+    <a href="datos.html" class="boton">Datos</a>
+    <a href="imagen.html" class="boton">Imágenes</a>
+    <a href="memoria.html" class="boton">Memorias</a>
+    <a href="caracteres.html" class="boton">Carácteres</a>
+  </div>
+  <div>
+    <ol>
+      <li style="font-size: 24px; background-color: yellow;"><b>Tipos de Memoria</b></li>
+      <p style="font-size: 12px;">Existen distintos tipos de memoria.</p>
+      <p style="font-size: 12px;">El principal método de clasificación es como almacenan los bits:</p>
+      <ul>
+        <li style="font-size: 12px;">ROM (read only memory) - no volátil</li>
+        <li style="font-size: 12px;">SRAM o cache</li>
+        <li style="font-size: 12px;">RAM (random acces memory) - volatil</li>
+        <li style="font-size: 12px;">Memorias externas...</li>
+      </ul>
+      <li style="font-size: 24px; background-color: yellow;"><b>ROM</b> (Read only memory)</li>
+      <p style="font-size: 12px;"><b>No es volátil</b></p>
+      <p style="font-size: 12px;">Memoria de tipo secuencial.<br>Originalmente (80's) el SO venia cargado en la
+        ROM<br>En la ROM se almacena fundamentalmente la bios, y otros programas y configuracion de incio</p>
+      <img src="ROM.png" style="display: flex; justify-content: center; margin: auto">
+      <li style="font-size: 24px; background-color: yellow;"><b>RAM</b> (Random Access Memory)</li>
+      <p style="font-size: 12px;">Memoria de acceso aleatorio, rápida pero volátil</p>
+      <p style="font-size: 12px;">Es el lugar a donde van a ejecutarse y a permanecer activos los diversos programas,
+        incluyendo el SO</p>
+      <p style="font-size: 12px;">Los dos tipos principales de memorias RAM son:</p>
+      <ol>
+        <li style="font-size: 12px;">DRAM (Dynamic RAM)</li>
+        <li style="font-size: 12px;">SRAM (Static RAM)</li>
+        <ul>
+          <li style="font-size: 10px;">Más rapida</li>
+          <li style="font-size: 10px;">Más compleja</li>
+          <li style="font-size: 10px;">Mayor costo</li>
+        </ul>
+      </ol>
+      <img src="ram.png" style="display: flex; justify-content: center; margin: auto;">
+      <li style="font-size: 24px; background-color: yellow;"><b>Cache</b></li>
+      <ul>
+        <li style="font-size: 18px;">Nivel 1:</li>
+        <ul>
+          <li style="font-size: 12px;">Se encarga de almacenar datos e instruccioens frecuentemente utilizadas. Se
+            encuentra en el núcleo del microprocesador y su capacidad es de hasta 768 kb.</li>
+        </ul>
+        <li style="font-size: 18px;">Nivel 2:</li>
+        <ul>
+          <li style="font-size: 12px;">Se encarga de almacenar datos de uso frecuente, siendo más lenta que la caché L1,
+            pero más rápida que la memoria principal (RAM). Se encuentra en el procesador, pero no en su núcleo.</li>
+        </ul>
+        <li style="font-size: 18px;">Nivel 3:</li>
+        <ul>
+          <li style="font-size: 12px;">Es más rápida que la memoria principal (RAM), pero más lenta que L2. En esta
+            memoria se agiliza el acceso a datos e instrucciones que no fueron localizadas en L1 o L2.</li>
+        </ul>
+      </ul>
+      <img src="cache.png" style="display: flex; justify-content: center; margin: auto;">
+      <li style="font-size: 24px; background-color: yellow;"><b>Almacenamiento de datos masivos</b></li>
+      <p style="font-size: 12px;">Disco Duro (Interno/externo)</p>
+      <ul style="font-size: 10px; color: gray">
+        <li>Grande (memoria virtual para el procesador)</li>
+        <li>Tradicionalmente es un soporte magnético</li>
+        <li>Acceso secuencial - mucho más lenta</li>
+        <li>Actualmente siendo reemplazado por discos de estado solido (SSD) - Memoria Flash</li>
+      </ul>
+      <p style="font-size: 12px;">Pendrives</p>
+      <p style="font-size: 12px;">Otras memorias</p>
+      <p style="font-size: 12px;">Discos ópticos (cada vez menos)</p>
+      <li style="font-size: 24px; background-color: yellow;"><b>¿Cuál utilizamos?</b></li>
+      <p style="font-size: 12px;">Las memorias:</p>
+      <ul style="font-size: 10px; color: gray">
+        <li>Accesibles y mcuha capacidad, pero lentas</li>
+        <li>De mayor capacidad y rápidas, pero muy caras</li>
+        <li>Rápidas y accesibles, pero de poca capacidad</li>
+      </ul>
+      <p style="font-size: 12px; color: gray">Por tanto se trabaja con una combinación de memorias.</p>
+      <li style="font-size: 24px; background-color: yellow;"><b>Niveles</b></li>
+      <p style="font-size: 18px; color: white; background-color: #04B4AE;">Primer nivel</p>
+      <ul>
+        <li style="font-size: 12px;">Cache (muy rápidas, cara, poco tamaño, poca capacidad)</li>
+      </ul>
+      <p style="font-size: 18px; color: white; background-color: #04B4AE;">Segundo nivel</p>
+      <ul>
+        <li style="font-size: ;">Ram (rápida, económica, tamaño medio, capacidad media)</li>
+      </ul>
+      <p style="font-size: 18px; background-color: #04B4AE; color: white; ;">Tercer nivel</p>
+      <ul>
+        <li style="font-size: 12px;">Discos y otros (lentos, muy baratos, tamaño mediano a grande, gran capacidad)</li>
+      </ul>
+    </ol>
+  </div>
+</body>
+
+</html>

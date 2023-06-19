@@ -1,0 +1,39 @@
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid #333;
+}
+
+.boton:hover {
+  background-color: #ccc;
+}
+
+.contenedor-botones {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.contendor-titulo {
+  background-color: green;
+  display: flex;
+  align-items: center;
+}
+
+.imagen {
+  margin-right: 10px;
+}
+
+.contenedor-memoria {
+  display: flex;
+  align-items: center;
+}
+
+.memoria {
+  margin-left: 10px;
+}
